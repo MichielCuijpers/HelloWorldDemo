@@ -1,55 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<project name="jenkins-tests" basedir="." default="linux">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite>
 
-<property name="junit.output.dir" value="output"/>
-<property name="src.dir" value="src"/>
-<property name="lib.dir" value="libs" />
-<property name="bin.dir" value="bin" />
-<property name="full-compile" value="true" />
+  <!-- if your classname does not include a dot, the package defaults to "(root)" -->
+  <testcase name="my testcase" classname="my package.my classname" time="29">
 
-<path id="classpath.base"/>
+    <!-- If the test didn't pass, specify ONE of the following 3 cases -->
 
-<path id="classpath.test">
-    <pathelement location="${bin.dir}" />
-    <pathelement location="${src.dir}" />
-    <pathelement location="${lib.dir}" />
-    <pathelement location="${lib.dir}/junit.jar" />
-    <path refid="classpath.base" />
-</path>
+    <!-- option 1 --> <skipped />
+    <!-- option 2 --> <failure message="my failure message">my stack trace</failure>
+    <!-- option 3 --> <error message="my error message">my crash report</error>
 
-<target name="clean" description="Clean up build artefacts">
-    <delete dir="${basedir}/${junit.output.dir}" />
-</target>
+    <system-out>my STDOUT dump</system-out>
 
-<target name="prepare" depends="clean" description="Prepare for build">
-    <mkdir dir="${basedir}/${junit.output.dir}" />
-    <mkdir dir="${junit.output.dir}/reports"/> 
-</target>
+    <system-err>my STDERR dump</system-err>
 
-<target name="compile" depends="prepare">
-    <javac srcdir="${src.dir}" destdir="${bin.dir}" verbose="${full-compile}" includeAntRuntime="false" >
-        <classpath refid="classpath.test"/>
-    </javac>
-</target>
+  </testcase>
 
-<target name="test" depends="compile">
-    <junit printsummary="true" haltonfailure="false">
-        <formatter type="xml" usefile="true"/>
-        <classpath refid="classpath.test" />
-        <batchtest fork="yes" todir="${junit.output.dir}">
-            <fileset dir="${src.dir}">
-                <include name="*.java"/>
-            </fileset>
-        </batchtest>
-    </junit>
-</target>
-
-<target name="test-reports" depends="test">
-    <junitreport tofile="TESTS-TestSuites.xml" todir="${junit.output.dir}/reports">
-        <fileset dir="${junit.output.dir}">
-            <include name="TEST-*.xml" />
-        </fileset>
-        <report format="frames" todir="${junit.output.dir}/reports" />
-    </junitreport>
-</target>
-</project>
+</testsuite>
