@@ -17,7 +17,7 @@
   <property name="main-class" value="HelloWorldDemo"/>
 
   <target name="clean" description="Deletes directories that the build will create.">
-    <delete dir="${build.dir}" dir="${reports.dir}"/>
+    <delete dir="${build.dir}"/>
       </target>
 
   <target name="compile" description="Compiles all .java files.">
