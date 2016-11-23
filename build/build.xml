@@ -58,7 +58,7 @@
         <classpath>
             <pathelement location="inst-classes" />
         </classpath>
-        <test name="xxx.AllNonGWTTestCaseTests" haltonfailure="no" outfile="build/result">
+        <test name="xxx.AllNonGWTTestCaseTests" haltonfailure="no" outfile="build/build/result">
             <formatter type="xml" />
         </test>
     </junit>
