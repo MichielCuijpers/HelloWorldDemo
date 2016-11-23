@@ -19,7 +19,8 @@
   <property name="main-class" value="HelloWorldDemo"/>
 
   <target name="clean" description="Deletes directories that the build will create.">
-    <delete dir="${build.dir}"/>
+    <delete dir="${build.dir}"
+	<mkdir dir="${reports.dir}"/>
       </target>
 	  
   <target name="clean2" description="Deletes directories that the build will create.">
