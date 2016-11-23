@@ -24,8 +24,6 @@
 	  
   <target name="clean2" description="Deletes directories that the build will create.">
     <delete dir="${reports.dir}"/>
-	<echo message="Create the directory report ${report.dir}" />
-		<mkdir dir="${reports.dir}" />
       </target>
 	  
   <target name="compile" description="Compiles all .java files.">
