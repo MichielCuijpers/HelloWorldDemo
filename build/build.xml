@@ -62,7 +62,7 @@
             <formatter type="xml" />
         </test>
     </junit>
-</target>
+  </target>
   
 
 </project>
