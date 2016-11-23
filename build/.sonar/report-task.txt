@@ -1,5 +1,5 @@
 projectKey=java-sonar-runner-simple
 serverUrl=http://localhost:9000
 dashboardUrl=http://localhost:9000/dashboard/index/java-sonar-runner-simple
-ceTaskId=AViR37vD9dh2RJ5otkJp
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AViR37vD9dh2RJ5otkJp
+ceTaskId=AViR3UqC9dh2RJ5otkJo
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AViR3UqC9dh2RJ5otkJo
