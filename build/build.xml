@@ -1,4 +1,14 @@
-<project name="HelloWorldDemo" basedir="." default="main">
+<project name="HelloWorldDemo" basedir="." default="main" xmlns:sonar="antlib:org.sonar.ant">
+
+		<!-- Define the SonarQube global properties (the most usual way is to pass these properties via the command line) -->
+  <property name="sonar.host.url" value="http://localhost:9000" />
+  <property name="sonar.projectKey" value="org.codehaus.sonar:example-java-ant" />
+  <property name="sonar.projectName" value="Simple Java Project analyzed with the SonarQube Ant Task" />
+  <property name="sonar.projectVersion" value="1.0" />
+  <property name="sonar.sources" value="src" />
+  <property name="sonar.java.binaries" value="build" />
+  <property name="sonar.java.libraries" value="lib/*.jar" />
+  
 
   <property name="src.dir" value="src"/>
   <property name="build.dir" value="build"/>
@@ -31,5 +41,16 @@
   <target name="clean-build" depends="clean,jar" description="Could clean up!"/>
 
   <target name="main" depends="clean,run"/>
+  
+  <!-- Define the SonarQube target -->
+  <target name="sonar">
+    <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+        <!-- Update the following line, or put the "sonarqube-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+        <classpath path="path/to/sonar/ant/task/lib/sonarqube-ant-task-*.jar" />
+    </taskdef>
+ 
+    <!-- Execute the SonarQube analysis -->
+    <sonar:sonar />
+  </target>
 
 </project>
