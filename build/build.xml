@@ -52,5 +52,16 @@
     <!-- Execute the SonarQube analysis -->
     <sonar:sonar />
   </target>
+  
+  <target name="runTests" description="Run JUnit tests">
+    <junit printsummary="yes" dir="test-classes" fork="true">
+        <classpath>
+            <pathelement location="inst-classes" />
+        </classpath>
+        <test name="xxx.AllNonGWTTestCaseTests" haltonfailure="no" outfile="result">
+            <formatter type="xml" />
+        </test>
+    </junit>
+</target>
 
 </project>
