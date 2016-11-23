@@ -12,6 +12,8 @@
 
   <property name="src.dir" value="src"/>
   <property name="build.dir" value="build"/>
+  <property name="reports.dir" value="reports"/>
+  
   <property name="classes.dir" value="${build.dir}/classes"/>
   <property name="jar.dir" value="${build.dir}/jar"/>
   <property name="main-class" value="HelloWorldDemo"/>
@@ -19,7 +21,11 @@
   <target name="clean" description="Deletes directories that the build will create.">
     <delete dir="${build.dir}"/>
       </target>
-
+	  
+  <target name="clean2" description="Deletes directories that the build will create.">
+    <delete dir="${reports.dir}"/>
+      </target>
+	  
   <target name="compile" description="Compiles all .java files.">
     <mkdir dir="${classes.dir}"/>
     <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
@@ -40,7 +46,7 @@
 
   <target name="clean-build" depends="clean,jar" description="Could clean up!"/>
 
-  <target name="main" depends="clean,run"/>
+  <target name="main" depends="clean,run,clean2"/>
   
   <!-- Define the SonarQube target -->
   <target name="sonar">
