@@ -26,6 +26,7 @@
 
   <target name="clean" description="Deletes directories that the build will create.">
     <delete dir="${build.dir}"/>
+	<mkdir dir="${reports.dir}"/>
       </target>
 	  
   <target name="clean2" description="Deletes directories that the build will create.">
@@ -69,7 +70,6 @@
   </target>
   
   <target name="test" depends="compile, clean2">
-  <mkdir dir="${reports.dir}"/>
     <junit printsummary="on" haltonfailure="yes" fork="true">
         <classpath>
           <path refid="classpath.test"/>
@@ -80,12 +80,6 @@
             <fileset dir="${test.src.dir}" includes="**/*Test.java" />
         </batchtest>
     </junit>
-	<junitreport todir="./reports">
-  <fileset dir="./reports">
-    <include name="TEST-*.xml"/>
-  </fileset>
-  <report format="frames" todir="./report/html"/>
-</junitreport>
   </target>
 
 </project>
