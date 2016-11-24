@@ -21,7 +21,6 @@
 <path id="classpath.test">
     <pathelement location="lib/junit-4.12.jar"/>
 	<pathelement location="lib/hamcrest-core-1.3.jar"/>
-	<pathelement location="${build.dir}/jar"/>
   </path>
 
   <target name="clean" description="Deletes directories that the build will create.">
