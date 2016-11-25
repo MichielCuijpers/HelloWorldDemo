@@ -26,11 +26,8 @@
 
   <target name="clean" description="Deletes directories that the build will create.">
     <delete dir="${build.dir}"/>
+	<delete dir="${reports.dir}"/>
 	<mkdir dir="${reports.dir}"/>
-      </target>
-	  
-  <target name="clean2" description="Deletes directories that the build will create.">
-    <delete dir="${reports.dir}"/>
       </target>
 	  
   <target name="compile" description="Compiles all .java files.">
@@ -66,7 +63,7 @@
 
   <target name="clean-build" depends="clean,jar" description="Could clean up!"/>
 
-  <target name="main" depends="clean,run,clean2"/>
+  <target name="main" depends="clean,run"/>
   
   <!-- Define the SonarQube target -->
   <target name="sonar">
@@ -79,7 +76,7 @@
     <sonar:sonar />
   </target>
   
-  <target name="test" depends="compile, clean2">
+  <target name="test" depends="compile">
     <junit printsummary="on" haltonfailure="yes" fork="true">
         <classpath>
           <path refid="classpath.test"/>
