@@ -52,6 +52,16 @@
   <target name="run" depends="jar" description="Runs the main-class in the JAR file.">
     
 	<java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/>
+	<junit haltonfailure="false" printsummary="true">
+		<classpath>
+          <path refid="classpath.test"/>
+          <pathelement location="${build.dir}/classes"/>
+        </classpath>
+		<batchtest haltonfailure ="false" fork="true" todir="reports">
+			<fileset dir="${test.src.dir}" includes="**/*Test.java" />
+		</batchtest>
+		<formatter type="xml"/>
+	</junit>
   </target>
 
   <target name="clean-build" depends="clean,jar" description="Could clean up!"/>
