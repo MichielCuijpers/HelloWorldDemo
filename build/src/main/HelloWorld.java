@@ -18,7 +18,7 @@ public class HelloWorld {
 	
 	public static int vermenigvuldig (int test, int test2){
 		
-		res = test * test2;
+		int res = test * test2;
 		System.out.println(res);
 		return res;
 	}
