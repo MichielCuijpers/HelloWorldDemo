@@ -17,4 +17,11 @@ public class HelloWorldTest {
 	    int x  = 2 ; 
 	    assertEquals(3, HelloWorld.Telop(x));
 	}
+	
+	@Test
+	public void testMultiply2by17() 
+	{
+	    int x  = 2 ; int y = 17; 
+	    assertEquals(34, HelloWorld.vermenigvuldig(x,y));
+	}
 }
