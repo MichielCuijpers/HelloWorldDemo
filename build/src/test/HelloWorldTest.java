@@ -10,4 +10,11 @@ public class HelloWorldTest {
 	    int x  = 1 ; 
 	    assertEquals(2, HelloWorld.Telop(x));
 	}
+	
+	@Test
+	public void testAdd2Plus1() 
+	{
+	    int x  = 2 ; 
+	    assertEquals(3, HelloWorld.Telop(x));
+	}
 }
