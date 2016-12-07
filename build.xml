@@ -18,6 +18,21 @@
   <property name="jar.dir" value="${build.dir}/jar"/>
   <property name="main-class" value="HelloWorld"/>
   
+  <!-- define Maven coordinates -->
+<property name="groupId" value="com.juvenxu" />
+<property name="artifactId" value="ant-demo" />
+<property name="version" value="1.0-SNAPSHOT" />
+
+<!-- defined maven snapshots and staging repository id and url -->
+  <property name="ossrh-snapshots-repository-url" 
+    value="https://oss.sonatype.org/content/repositories/snapshots/" />
+  <property name="ossrh-staging-repository-url" 
+    value="https://oss.sonatype.org/service/local/staging/deploy/maven2/" />
+  <!-- there server id in the Maven settings.xml -->
+  <property name="ossrh-server-id" value="ossrh" />
+
+
+
 <path id="classpath.test">
     <pathelement location="lib/junit-4.12.jar"/>
 	<pathelement location="lib/hamcrest-core-1.3.jar"/>
@@ -64,6 +79,17 @@
   <target name="clean-build" depends="clean,jar" description="Could clean up!"/>
 
   <target name="main" depends="clean,run"/>
+  
+  
+  <target name="deploy" depends="dist" description="deploy snapshot version to Maven snapshot repository">
+    <artifact:mvn>
+      <arg value="org.apache.maven.plugins:maven-deploy-plugin:2.6:deploy-file" />
+      <arg value="-Durl=${ossrh-snapshots-repository-url}" />
+      <arg value="-DrepositoryId=${ossrh-server-id}" />
+      <arg value="-DpomFile=pom.xml" />
+      <arg value="-Dfile=${jar.dir}" />
+    </artifact:mvn>
+  </target>
   
   <!-- Define the SonarQube target -->
   <target name="sonar">
