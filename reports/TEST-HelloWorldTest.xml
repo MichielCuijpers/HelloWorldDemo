@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Ewan-Laptop" name="HelloWorldTest" skipped="0" tests="3" time="0.68" timestamp="2016-12-14T13:43:06">
+<testsuite errors="0" failures="0" hostname="Ewan-Laptop" name="HelloWorldTest" skipped="0" tests="3" time="0.102" timestamp="2016-12-14T18:05:09">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -57,7 +57,7 @@
     <property name="java.vendor.url" value="http://java.oracle.com/" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner HelloWorldTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Ewan\Desktop\HelloWorldDemo\reports\TEST-HelloWorldTest.xml crashfile=C:\Users\Ewan\Desktop\HelloWorldDemo\junitvmwatcher8567740395392132260.properties propsfile=C:\Users\Ewan\Desktop\HelloWorldDemo\junit1749358015508765004.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner HelloWorldTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Ewan\Desktop\HelloWorldDemo\reports\TEST-HelloWorldTest.xml crashfile=C:\Users\Ewan\Desktop\HelloWorldDemo\junitvmwatcher3304704137521020627.properties propsfile=C:\Users\Ewan\Desktop\HelloWorldDemo\junit5300439683898518943.properties" />
     <property name="java.class.path" value="C:\Users\Ewan\Desktop\HelloWorldDemo\lib\junit-4.12.jar;C:\Users\Ewan\Desktop\HelloWorldDemo\lib\hamcrest-core-1.3.jar;C:\Users\Ewan\Desktop\HelloWorldDemo\build\jar;C:\Users\Ewan\Desktop\HelloWorldDemo\build\classes;C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Ant_AntInstallation\Test_Ant\lib\ant-launcher.jar;C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Ant_AntInstallation\Test_Ant\lib\ant.jar;C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Ant_AntInstallation\Test_Ant\lib\ant-junit.jar;C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Ant_AntInstallation\Test_Ant\lib\ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
@@ -83,9 +83,9 @@
     <property name="ant.project.invoked-targets" value="main" />
     <property name="sonar.projectKey" value="org.codehaus.sonar:example-java-ant" />
   </properties>
-  <testcase classname="HelloWorldTest" name="testAdd1Plus1" time="0.021" />
+  <testcase classname="HelloWorldTest" name="testAdd1Plus1" time="0.003" />
   <testcase classname="HelloWorldTest" name="testAdd2Plus1" time="0.001" />
-  <testcase classname="HelloWorldTest" name="testMultiply2by17" time="0.001" />
+  <testcase classname="HelloWorldTest" name="testMultiply2by17" time="0.0" />
   <system-out><![CDATA[2
 3
 34

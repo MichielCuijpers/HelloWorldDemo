@@ -10,6 +10,7 @@
     <properties>
         <mainClass>com.nisi.dockerapp.App</mainClass>
         <docker.registry></docker.registry>
+		<dockerHost>http://146.185.181.163:2376</dockerHost>
     </properties>
 
     <url>http://maven.apache.org</url>
@@ -64,8 +65,7 @@
                     </entryPoint>
 
                     <serverId>docker-hub</serverId>
-                    <registryUrl>https://index.docker.io/v1/</registryUrl>
-
+                    
                     <!-- <pushImage>false</pushImage> -->
                     <resources>        <!-- Dockerfile building resources -->
                         <resource>
