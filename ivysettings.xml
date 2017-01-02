@@ -1,0 +1,8 @@
+<ivysettings>
+<settings defaultResolver="nexus-central"/>
+<credentials host="http://localhost:8081/nexus" realm="Sonatype Nexus Repository Manager" username="admin" passwd="admin123"/>
+<resolvers>
+<ibiblio name="nexus-central" root="http://localhost:8081/nexus/content/repositories/central/" m2compatible="true"/>
+<ibiblio name="nexus-deploy" root="http://localhost:8081/nexus/content/repositories/repo" m2compatible="true"/>
+</resolvers>
+</ivysettings>

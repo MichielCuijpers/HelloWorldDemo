@@ -1,0 +1,6 @@
+<ivy-module version='2.0' xmlns:e="http://ant.apache.org/ivy/extra">
+<info organisation="nisi" module="demo" revision="1.0"/>
+<publications>
+<artifact name="hellowolrd" type="jar"/>
+</publications>
+</ivy-module>
